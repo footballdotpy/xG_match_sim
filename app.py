@@ -2,7 +2,6 @@ import pickle
 import numpy as np
 import pandas as pd
 import streamlit as st
-import xgboost
 from matplotlib import pyplot as plt
 from scipy.stats import poisson, nbinom
 
