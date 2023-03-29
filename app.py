@@ -63,8 +63,12 @@ def zero_inflated_poisson_model(home_xg, away_xg, theta=0.08):
 
     st.write(f'Zero Inflated Poisson match probabilities:', 'Home', round(home_wins, 4), 'Draw', round(draws, 4),
              'Away', round(away_wins, 4))
-    st.write(f'Zero Inflated Poisson match probabilities summed:', round(home_wins, 4) + round(draws, 4) +
-             round(away_wins, 4))
+
+    sum_probs = round(home_wins, 4) + round(draws, 4) + round(away_wins, 4)
+    sum_probs_rounded = round(sum_probs, 4)
+    adjustment = 1 - sum_probs_rounded
+
+    st.write(f'Zero Inflated Poisson match probabilities summed:', sum_probs_rounded + adjustment)
     # Return the scorelines DataFrame
     return scorelines
 
