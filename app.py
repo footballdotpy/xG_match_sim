@@ -81,6 +81,7 @@ def main():
     text = st.text('Using known xG figures for a match, enter them into the boxes below.\n'
                    'The first prediction is made from and XGBoost Regressor trained on a dataset of 17000 rows from '
                    'understat.\n'
+                   'There is a clear element of home advantage derived from the model as can be seen with similiar xG values.\n'
                    'The second prediction uses a ZIF Poisson model with a theta of 0.08 to account for the 0-0.')
 
     # Add input fields for home and away xG
