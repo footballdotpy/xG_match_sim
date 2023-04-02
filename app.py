@@ -4,7 +4,6 @@ import pandas as pd
 import streamlit as st
 from matplotlib import pyplot as plt
 from scipy.stats import poisson, nbinom
-import xgboost
 
 # Load the saved XGBoost model
 with open('xgb_model.pkl', 'rb') as f:
